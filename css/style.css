@@ -53,30 +53,52 @@ footer{
 /*
 Keyframes for animation*/
 
-@-webkit-keyframes logo_wiggle{
-
+@-webkit-keyframes logo_wiggle {
+  from {
+    width: 25px;
+  }
+  to {
+    width: 420px;
+  }
 }
 
-@keyframes logo_wiggle{
+@keyframes logo_wiggle {
+  from {
+    width: 25px;
+  }
+  to {
+    width: 420px;
+  }
+}
 
-} 
-
-#logo{
-  
+#logo {
+  animation-name: logo_wiggle;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: no-repeat;
+  max-width: 420px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Cards! */
 .pricing{
-    min-height: 500px;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 500px;
+
 }
 
 .card {
-  
+  width: 400px;
   margin: 12px;
   background: #fff;
   border-radius: 7px;
   padding: 0 0 50px 0;
+  vertical-align: middle;
 }
 
 .card > header{
@@ -121,7 +143,10 @@ Keyframes for animation*/
 /* Gallery! */
 
 .gallery{
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   min-height: 600px;
 }
 
@@ -133,13 +158,19 @@ Keyframes for animation*/
 
 /* Navbar */
 header{
-  
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   background: #fff;
   border-bottom: 3px solid #50C7C7;
 }
 
 .nav_links{
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   list-style: none;
 }
 
@@ -159,7 +190,7 @@ header{
 
   /* Cards! */
   .card {
-    
+
   }
 
   .card_big{
@@ -170,11 +201,11 @@ header{
   /* Navbar */
 
   header{
-    
+
   }
 
   .nav_links{
-    
+
   }
 
   .nav_item a{
@@ -182,8 +213,8 @@ header{
   }
 }
 
-@media print { 
-  
+@media print {
+
   .card {
     flex-basis: 200px;
   }
