@@ -190,6 +190,8 @@ header{
 
   /* Cards! */
   .card {
+    display: flex;
+    
 
   }
 
