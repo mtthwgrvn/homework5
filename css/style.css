@@ -250,6 +250,7 @@ header{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
     -ms-flex-preferred-size: 250px;
         flex-basis: 250px;
   }
@@ -294,17 +295,37 @@ header{
   }
 }
 
-@media screen and (prefers-reduced-motion) {
-  .animatable {
+@media screen and (prefers-reduced-motion:reduce) {
+  #logo {
     animation: none;
   }
 }
 
+
+
 @media print {
+
+  * {
+    background-image: none !important;
+  }
 
   .card {
     -ms-flex-preferred-size: 200px;
         flex-basis: 200px;
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+      color-adjust: exact !important;                 /*Firefox*/
+}
+  .pricing {
+    align-items: baseline;
   }
+  #gallery, .gallery {
+    display: none;
+  }
+
+  footer {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+      color-adjust: exact !important;                 /*Firefox*/
+  }
+
 
 }
